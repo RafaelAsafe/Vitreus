@@ -3,8 +3,8 @@ import mne
 import pandas as pd
 import datetime
 
-diretorio = r'C:\Users\Asafe\OneDrive - ifsp.edu.br\Documentos\Asafe IFSP\TCC\programação\storage_repo\dados_exames\Patients_raw\PNES'
-destiny_directory = r'C:\Users\Asafe\OneDrive - ifsp.edu.br\Documentos\Asafe IFSP\TCC\programação\storage_repo\dados_exames\Patients_xlsx\PNES'
+diretorio = config.get('exams_diretory')
+destiny_directory = config.get('processing_exams_directory')
 horario = str(datetime.time()).replace(':', '-')
 print(horario)
 # mne.utils.set_config('MNE_USE_CUDA', 'false')

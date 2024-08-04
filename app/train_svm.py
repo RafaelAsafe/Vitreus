@@ -24,14 +24,11 @@ def mean_norm(df_input):
 # 4. Variaveis estáticas   #
 ############################
 
-
-dataset_filename = 'dataset_pnes_x_ep.csv'
-
 ##########
 # 4. ETL #
 ##########
 
-dataset = pd.read_excel(dataset_filename)
+dataset = pd.read_excel(config.get('dataset_filename'))
 dataset.set_index('id_paciente', inplace=True)
 dataset_normalizado_x = mean_norm(
     dataset.drop(['cod_exame', 'diagnostico'], axis=1))
