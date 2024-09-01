@@ -3,9 +3,9 @@
 Projeto de TCC que consiste em receber um arquivo edf e predizer se o arquivo representa um exame de paciente com PNES ou SE 
 
 
-# Mapa do projeto 
+## Mapa do projeto 
 
-## App 
+### App 
     pasta que contém os códigos do projeto 
         - config.py
             carrega o arquivo config.ini e inicia as variaveis de configuração para rodar o projeto 
@@ -18,7 +18,7 @@ Projeto de TCC que consiste em receber um arquivo edf e predizer se o arquivo re
         - train_svm.py
             treina o modelo com o dataset criado e cria um artefato do modelo para realizar futuras predições
 
-## Data 
+### Data 
     pasta que contem os dados do projeto 
         - exams
             exames brutos e processados dos pascientes com pnes e se 
@@ -29,7 +29,7 @@ Projeto de TCC que consiste em receber um arquivo edf e predizer se o arquivo re
         - test_exam
             exame de teste do modelo 
 
-# Ordem de execução 
+## Ordem de execução 
 
     1 - edf_to_csv.py
     2 - make_dataset.py
