@@ -21,7 +21,7 @@ Projeto de TCC que consiste em receber um arquivo edf e predizer se o arquivo re
 ### Data 
     pasta que contem os dados do projeto 
         - exams
-            exames brutos e processados dos pascientes com pnes e se 
+            exames brutos e processados dos pacientes com pnes e se 
         - datasets
             lore impsun 
         - model.pkl 
