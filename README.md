@@ -5,7 +5,7 @@ Projeto de TCC que consiste em receber um arquivo edf e predizer se o arquivo re
 
 # Mapa do projeto 
 
-## app 
+## App 
     pasta que contém os códigos do projeto 
         - config.py
             carrega o arquivo config.ini e inicia as variaveis de configuração para rodar o projeto 
@@ -18,7 +18,7 @@ Projeto de TCC que consiste em receber um arquivo edf e predizer se o arquivo re
         - train_svm.py
             treina o modelo com o dataset criado e cria um artefato do modelo para realizar futuras predições
 
-## data 
+## Data 
     pasta que contem os dados do projeto 
         - exams
             exames brutos e processados dos pascientes com pnes e se 

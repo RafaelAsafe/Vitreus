@@ -14,7 +14,6 @@ from sklearn.model_selection import KFold
 # 2 . Funções  #
 ################
 
-
 def mean_norm(df_input):
     return df_input.apply(lambda x: (x - x.mean()) / x.std(), axis=0)
 
