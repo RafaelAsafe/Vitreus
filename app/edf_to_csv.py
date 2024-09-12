@@ -125,3 +125,4 @@ for diretorio, subpastas, arquivos in os.walk(ORIGIN_DIRECTORY):
             print(f"arquivo:{arquivo} apresentou o erro \n \n \n \n{e}")
             with open(f'log_text_{horario}.csv', 'a') as f:
                 f.write(f'{arquivo}#{e}\n')
+                
