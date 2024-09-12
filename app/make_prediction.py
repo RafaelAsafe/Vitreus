@@ -13,3 +13,4 @@ loaded_model = pickle.load(open(PICKLE_MODULE_FILENAME, 'rb'))
 
 prediction = loaded_model.predict((dataset_test.drop(['cod_exame','id_paciente','diagnostico'],axis=1)))
 print(prediction)
+

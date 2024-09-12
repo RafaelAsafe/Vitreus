@@ -56,3 +56,4 @@ with col2:
                     f.write(uploaded_file_ce.getvalue())
             except Exception as e:
                 st.error(f"Erro ao ler o arquivo {e}")
+
