@@ -4,8 +4,8 @@ import pandas as pd
 import datetime
 from config import config
 
-diretorio = config.get('locations','raw_exams_diretory')
-destiny_directory = config.get('locations','processing_exams_directory')
+ORIGIN_DIRECTORY = config.get('locations','raw_exams_diretory')
+DESTINY_DIRECTORY = config.get('locations','processing_exams_directory')
 
 horario = str(datetime.time()).replace(':', '-')
 
@@ -13,9 +13,7 @@ if not os.path.exists('./data/exams/processed/PNES'):
     os.mkdir('./data/exams/processed/PNES')
     os.mkdir('./data/exams/processed/SE')
 
-# mne.utils.set_config('MNE_USE_CUDA', 'false')
-
-for diretorio, subpastas, arquivos in os.walk(diretorio):
+for diretorio, subpastas, arquivos in os.walk(ORIGIN_DIRECTORY):
     for arquivo in arquivos:
         print(f'------------------{arquivo}-------------------')
         try:
@@ -64,9 +62,9 @@ for diretorio, subpastas, arquivos in os.walk(diretorio):
             arquivo = remove_extesion[0]
             
             if 'PNES' in diretorio:
-                destiny_path = os.path.join(destiny_directory+'/PNES/', arquivo)
+                destiny_path = os.path.join(DESTINY_DIRECTORY+'/PNES/', arquivo)
             else:
-                destiny_path = os.path.join(destiny_directory+'/SE/', arquivo)
+                destiny_path = os.path.join(DESTINY_DIRECTORY+'/SE/', arquivo)
 
 
             data.to_excel(destiny_path + '.xlsx', index=False)
@@ -117,9 +115,9 @@ for diretorio, subpastas, arquivos in os.walk(diretorio):
             arquivo = remove_extesion[0]
 
             if 'PNES' in diretorio:
-                destiny_path = os.path.join(destiny_directory+'/PNES/', arquivo)
+                destiny_path = os.path.join(DESTINY_DIRECTORY+'/PNES/', arquivo)
             else:
-                destiny_path = os.path.join(destiny_directory+'/SE/', arquivo)
+                destiny_path = os.path.join(DESTINY_DIRECTORY+'/SE/', arquivo)
 
             data.to_excel(destiny_path + '.xlsx', index=False)
 
