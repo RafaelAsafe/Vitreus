@@ -36,6 +36,8 @@ dataset = pd.read_excel(DATASET_FILENAME)
 
 x = dataset.drop(['diagnostico', 'diagnostico_bin', 'cod_exame'], axis=1)
 y = dataset['diagnostico_bin']
+
+# balanceamento
 balanceamento = {1: 1.8, 0: 1}
 model = svm.SVC(kernel='linear', class_weight=balanceamento)
 model.fit(x,y)
