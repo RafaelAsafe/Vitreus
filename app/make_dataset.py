@@ -7,10 +7,10 @@ import os
 import re
 from config import config
 
-diretorio_raiz = config.get('locations','diretorio_exames')
-diretorio_SE = config.get('locations','diretorio_exames_se')
-diretorio_PNES = config.get('locations','diretorio_exames_pnes')
-diretorio_destino = config.get('locations','diretorio_dataset')
+DIRETORIO_RAIZ = config.get('locations','diretorio_exames')
+DIRETORIO_SE = config.get('locations','diretorio_exames_se')
+DIRETORIO_PNES = config.get('locations','diretorio_exames_pnes')
+DIRETORIO_DESTINO = config.get('locations','diretorio_dataset')
 
 atributos = ['id_paciente', 'cod_exame', 'mediaA5', 'mediaD5', 'mediaD4', 'mediaD3', 'mediaD2', 'mediaD1', 'desvpadA5',
              'desvpadD5', 'desvpadD4', 'desvpadD3', 'desvpadD2', 'desvpadD1', 'maximoA5',
@@ -20,7 +20,7 @@ atributos = ['id_paciente', 'cod_exame', 'mediaA5', 'mediaD5', 'mediaD4', 'media
 dataset = pd.DataFrame(data=None, columns=atributos)
 
 
-for diretorio, subpastas, arquivos in os.walk(diretorio_raiz):
+for diretorio, subpastas, arquivos in os.walk(DIRETORIO_RAIZ):
     for file_name in arquivos:
 
         print(file_name)
@@ -49,7 +49,7 @@ for diretorio, subpastas, arquivos in os.walk(diretorio_raiz):
         n = re.search(r"(?<=-).*", file_name)
         code_exam = n.group(0)
 
-        if diretorio == diretorio_PNES:
+        if diretorio == DIRETORIO_PNES:
             diagnostico = 'PNES'
         elif diretorio == diretorio_SE:
             diagnostico = 'SE'
@@ -65,13 +65,13 @@ for diretorio, subpastas, arquivos in os.walk(diretorio_raiz):
         dataset = pd.concat([dataset, df_row], ignore_index=True)
 
 
-dataset.to_excel(os.path.join(diretorio_destino,'dataset_raw.xlsx'))
+dataset.to_excel(os.path.join(DIRETORIO_DESTINO,'dataset_raw.xlsx'))
 
 dataset['diagnostico_bin'] = np.where(dataset['diagnostico'] == 'PNES', 1, 0)
 dataset.drop(columns=['code_exam','patientid'])
 
-dataset.to_excel(os.path.join(diretorio_destino,'dataset.xlsx'))
+dataset.to_excel(os.path.join(DIRETORIO_DESTINO,'dataset.xlsx'))
 
 dataset_normalizado_x = mean_norm(dataset)
 
-dataset.to_excel(os.path.join(diretorio_destino,'dataset_normalizado.xlsx'))
+dataset.to_excel(os.path.join(DIRETORIO_DESTINO,'dataset_normalizado.xlsx'))
