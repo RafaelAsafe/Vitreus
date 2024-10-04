@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-from utils import read_edf
+from utils.utils import read_edf
 
+
+st.set_page_config(page_title="Adicionar arquivo", page_icon="📈")
 
 # olar
 
@@ -56,4 +58,3 @@ with col2:
                     f.write(uploaded_file_ce.getvalue())
             except Exception as e:
                 st.error(f"Erro ao ler o arquivo {e}")
-
