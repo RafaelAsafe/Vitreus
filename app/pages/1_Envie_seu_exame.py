@@ -39,6 +39,7 @@ with col1:
                     f.write(uploaded_file_pnes.getvalue())
             except Exception as e:
                 st.error(f"Erro ao ler o arquivo {e}")
+                
 # button PNES:
 with col2:
 
