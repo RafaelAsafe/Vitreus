@@ -31,9 +31,9 @@ if st.session_state['button']:
         try:
             # df_exam = edf_handler(uploaded_file)
             result = make_infer(uploaded_file)
-            if result == 0:
+            if result == 1:
                 st.write('### A hipótese diagnóstica provável é CNEP')
-            elif result == 1:
+            elif result == 0:
                 st.write('### A hipótese diagnóstica provável é SE')
             else:
                 st.write(result)
