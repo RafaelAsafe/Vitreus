@@ -4,9 +4,10 @@ import pandas as pd
 from config import config
 
 # TEST_EXAM_FILENAME = config.get('locations', 'test_exam_filename')
-PICKLE_MODULE_FILENAME = config.get('locations', 'pickle_location')
+# PICKLE_MODULE_FILENAME = config.get('locations', 'pickle_location')
 
 # making predictions with the saved model
+PICKLE_MODULE_FILENAME = 'E:\GIT\Vitreus\data\model.pkl'
 
 print(os.getcwd())
 
