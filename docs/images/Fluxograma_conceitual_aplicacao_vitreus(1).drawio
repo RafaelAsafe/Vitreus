@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0" version="24.7.17">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="925" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MEi1KJDdO8EVTgbHjlxN-0" target="MEi1KJDdO8EVTgbHjlxN-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-0" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;Recebe exame EDF&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="20" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Fluxograma Aplicação Vitreus&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="20" y="10" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-4" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="140" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-2" value="&lt;font face=&quot;Tahoma&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;ul style=&quot;font-size: 9px; padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Interpreta arquivo utilizando MNE&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot;&gt;Seleciona canais de interesse &lt;/font&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot;&gt;Aplica filtro passa-banda&lt;/font&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Armazena arquivo tratado em CSV&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-4">
+          <mxGeometry width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-3" value="&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;ETL de exames EDF&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;x8HfPYt_jtOgaRPftuJ_&quot;&gt;&lt;b&gt;para CSV&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-4">
+          <mxGeometry x="13.076923076923077" y="8.421052631578947" width="143.84615384615384" height="25.263157894736842" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-7" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="400" y="140" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="MEi1KJDdO8EVTgbHjlxN-7" source="MEi1KJDdO8EVTgbHjlxN-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-8" value="&lt;p style=&quot;line-height: 120%;&quot;&gt;&lt;/p&gt;&lt;ul style=&quot;font-size: 9px; padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Lê exame formato CSV&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot;&gt;Decompõe conjunto de sinais (Wavelet)&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot;&gt;Extração de vetor de características&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-7">
+          <mxGeometry width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-9" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;&lt;span data-darkreader-inline-bgcolor=&quot;&quot; data-darkreader-inline-color=&quot;&quot; id=&quot;docs-internal-guid-e3e81bfb-7fff-dc4f-59bf-74c2e50c88cb&quot; style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; --darkreader-inline-color: #e8e6e3; --darkreader-inline-bgcolor: transparent;&quot;&gt;Processamento dos Sinais de EEG com DWT&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-7">
+          <mxGeometry x="10" y="8.421052631578947" width="150" height="25.263157894736842" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MEi1KJDdO8EVTgbHjlxN-2" target="MEi1KJDdO8EVTgbHjlxN-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-11" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="140" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-12" value="&lt;p style=&quot;line-height: 250%;&quot;&gt;&lt;font face=&quot;Tahoma&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;ul style=&quot;font-size: 9px; padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Cria coluna de classificação do exame&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Cria coluna de identificação exame e paciente &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Normaliza colunas de interesse do modelo&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Concatena dados dos exames em um único Dataframe&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot;&gt;Armazena Dataframe em formato CSV&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-11">
+          <mxGeometry width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-13" value="&lt;font face=&quot;Times New Roman&quot; size=&quot;1&quot;&gt;&lt;b&gt;&lt;span data-darkreader-inline-bgcolor=&quot;&quot; data-darkreader-inline-color=&quot;&quot; id=&quot;docs-internal-guid-e478ff09-7fff-7e8d-69f6-0f9393a9a4c4&quot; style=&quot;color: rgb(0, 0, 0); background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; --darkreader-inline-color: #e8e6e3; --darkreader-inline-bgcolor: transparent; font-size: 14px;&quot;&gt;Construção do Dataset&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-11">
+          <mxGeometry x="10" y="8.421052631578947" width="150" height="25.263157894736842" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-14" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="400" y="350" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-15" value="&lt;p style=&quot;line-height: 140%;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul style=&quot;font-size: 9px; padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 9px;&quot;&gt;Recebe arquivo de exame EDF&lt;/font&gt;&lt;font face=&quot;Tahoma&quot; style=&quot;font-size: 9px;&quot;&gt; &lt;/font&gt;&lt;font face=&quot;fCrsY3Vi3brQpXXDE2ob&quot; style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 9px;&quot; face=&quot;Iro1ek4Ks0ADRoZDJtPR&quot;&gt;Realiza ETL arquivo exame (passo 4.3.1 e 4.3.2)&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 9px;&quot; face=&quot;Iro1ek4Ks0ADRoZDJtPR&quot;&gt;Interpreta arquivo pickle &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 9px;&quot; face=&quot;Iro1ek4Ks0ADRoZDJtPR&quot;&gt;Realiza inferência de exame&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-14">
+          <mxGeometry width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-16" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;&lt;span data-darkreader-inline-bgcolor=&quot;&quot; data-darkreader-inline-color=&quot;&quot; id=&quot;docs-internal-guid-e478ff09-7fff-7e8d-69f6-0f9393a9a4c4&quot; style=&quot;font-size: 12pt; color: rgb(0, 0, 0); background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; --darkreader-inline-color: #e8e6e3; --darkreader-inline-bgcolor: transparent;&quot;&gt;Predição de Novos Exames&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-14">
+          <mxGeometry x="10" y="8.421052631578947" width="150" height="25.263157894736842" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-19" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="190" y="350" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-20" value="&lt;p style=&quot;line-height: 270%;&quot;&gt;&lt;font face=&quot;Tahoma&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;ul style=&quot;font-size: 9px; padding-left: 20px;&quot;&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Interpreta Dataset &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Separa os dados de inferência dos dados de característica&amp;nbsp; &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Define balanceamento das classes de inferência &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Treina o modelo &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Valida resultado do modelo&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;zeKxVu2DvvRZIlE8RtYO&quot; style=&quot;font-size: 9px;&quot;&gt;Gera arquivo pickle &lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-19">
+          <mxGeometry width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-21" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;&lt;span data-darkreader-inline-bgcolor=&quot;&quot; data-darkreader-inline-color=&quot;&quot; id=&quot;docs-internal-guid-ab0b5cd6-7fff-e66d-8389-72d8aada69fc&quot; style=&quot;font-size: 12pt; color: rgb(0, 0, 0); background-color: transparent; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; --darkreader-inline-color: #e8e6e3; --darkreader-inline-bgcolor: transparent;&quot;&gt;Treinamento do Modelo SVM&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="MEi1KJDdO8EVTgbHjlxN-19">
+          <mxGeometry x="10" y="8.421052631578947" width="150" height="25.263157894736842" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MEi1KJDdO8EVTgbHjlxN-20" target="MEi1KJDdO8EVTgbHjlxN-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1090" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-33" value="&lt;font face=&quot;Times New Roman&quot; size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;Exibe predição do exame&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="630" y="410" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.533;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MEi1KJDdO8EVTgbHjlxN-12" target="MEi1KJDdO8EVTgbHjlxN-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="220" />
+              <mxPoint x="790" y="330" />
+              <mxPoint x="170" y="330" />
+              <mxPoint x="170" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MEi1KJDdO8EVTgbHjlxN-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="MEi1KJDdO8EVTgbHjlxN-15" target="MEi1KJDdO8EVTgbHjlxN-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -5,9 +5,10 @@ import pickle
 import numpy as np
 import pandas as pd
 from sklearn import svm
-from config import config
+from decouple import config
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
+from sklearn.metrics import confusion_matrix
 
 
 ################
@@ -21,8 +22,10 @@ def mean_norm(df_input):
 # 3. config setup #
 ###################
 
-DATASET_FILENAME = config.get('locations', 'dataset_filename')
-PICKLE_LOCATION = config.get('locations', 'pickle_location')
+
+DATASET_FILENAME = config('DATASET_FILENAME')
+PICKLE_LOCATION = config('pickle_location')
+
 
 ############################
 # 4. Variaveis estáticas   #
@@ -30,24 +33,31 @@ PICKLE_LOCATION = config.get('locations', 'pickle_location')
 
 ##########
 # 4. ETL #
-##########
+########## 
 
 dataset = pd.read_excel(DATASET_FILENAME)
 
-x = dataset.drop(['diagnostico', 'diagnostico_bin', 'cod_exame'], axis=1)
 y = dataset['diagnostico_bin']
+# x = dataset.drop(['diagnostico', 'diagnostico_bin',
+#                  'cod_exame', 'id_paciente','Unnamed: 0'], axis=1)
+x = dataset[['mediaA5','mediaD5','mediaD1','mediaD2','mediaD3','mediaD4']]
+ 
 
-# balanceamento
-balanceamento = {1: 1.8, 0: 1}
-model = svm.SVC(kernel='linear', class_weight=balanceamento)
-model.fit(x,y)
-kfold = KFold(n_splits=4, shuffle=True)
+# for i in range(10):
+    # balanceamento
+balanceamento = {1: 1, 0: 2}
+model = svm.SVC(kernel='rbf', class_weight=balanceamento)
+model.fit(x, y)
+kfold = KFold(n_splits=5, shuffle=True)
 result = cross_val_score(model, x, y, cv=kfold)
 
+# conf_mat = confusion_matrix(y, y_pred)
 print("K-Fold (R^2) Scores: {0}".format(result))
 print("Mean R^2 for Cross-Validation K-Fold: {0}".format(result.mean()))
+print(model.predict(x))
+print(y.value_counts())
+
 
 # save
 with open(PICKLE_LOCATION, 'wb') as f:
     pickle.dump(model, f)
-    
