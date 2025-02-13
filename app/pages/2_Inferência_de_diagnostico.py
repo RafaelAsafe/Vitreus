@@ -5,7 +5,6 @@ from model.make_prediction import make_infer
 # from utils import edf_handler
 
 
-
 st.title("Inferência de diagnostico")
 
 st.write("envie seu exame!")
@@ -18,9 +17,8 @@ if 'button' not in st.session_state:
 def click_button():
     st.session_state['button'] = not st.session_state['button']
 
+
 st.button("Exame_amostra", on_click=click_button)
-
-
 
 
 if st.session_state['button']:
@@ -31,11 +29,12 @@ if st.session_state['button']:
         try:
             # df_exam = edf_handler(uploaded_file)
             result = make_infer(uploaded_file)
-            if result == 0:
-                st.write('### A hipótese diagnóstica provável é CNEP')
-            elif result == 1:
-                st.write('### A hipótese diagnóstica provável é SE')
+            if result == 1:
+                st.write('### A hipótese diagnóstica é: CNEP (crises não epilépticas psicogênicas)')
+                
+            elif result == 0:
+                st.write('### A hipótese diagnóstica é: Epilepsia')
             else:
-                st.write(result)
+                st.write('Erro')
         except Exception as e:
             st.error(f"Erro ao ler o arquivo {e}")
