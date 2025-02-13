@@ -38,4 +38,3 @@ if st.session_state['button']:
                 st.write('Erro')
         except Exception as e:
             st.error(f"Erro ao ler o arquivo {e}")
-'   1+'

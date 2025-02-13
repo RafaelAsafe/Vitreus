@@ -43,19 +43,25 @@ y = dataset['diagnostico_bin']
 x = dataset[['mediaA5','mediaD5','mediaD1','mediaD2','mediaD3','mediaD4']]
  
 
-# for i in range(10):
-    # balanceamento
-balanceamento = {1: 1, 0: 2}
-model = svm.SVC(kernel='rbf', class_weight=balanceamento)
-model.fit(x, y)
-kfold = KFold(n_splits=5, shuffle=True)
-result = cross_val_score(model, x, y, cv=kfold)
+for i in range(10):
+    
+    balanceamento = {1: 1, 0: 2}
+    model = svm.SVC(kernel='rbf', class_weight=balanceamento)
+    model.fit(x, y)
+    kfold = KFold(n_splits=5, shuffle=True)
+    result = cross_val_score(model, x, y, cv=kfold,scoring='accuracy')
 
-# conf_mat = confusion_matrix(y, y_pred)
-print("K-Fold (R^2) Scores: {0}".format(result))
-print("Mean R^2 for Cross-Validation K-Fold: {0}".format(result.mean()))
-print(model.predict(x))
-print(y.value_counts())
+    # conf_mat = confusion_matrix(y, y_pred)
+
+    # print("K-Fold RECALL Scores: {0}".format(result))
+    # print("RECALL for Cross-Validation K-Fold: {0}".format(result.mean()))
+
+    # print("K-Fold average_precision Scores: {0}".format(result))
+    # print("average_precision for Cross-Validation K-Fold: {0}".format(result.mean()))
+
+    print("K-Fold accuracy Scores: {0}".format(result))
+    print("accuracy for Cross-Validation K-Fold: {0}".format(result.mean()))
+ 
 
 
 # save
