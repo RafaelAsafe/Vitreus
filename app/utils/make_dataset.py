@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import pywt
 from decouple import config
 from intervalos_exames import intervalos_exames
+from sklearn import preprocessing
 
 def to_seconds_list(list_tempo):
     return (list_tempo[0] * 3600 + list_tempo[1] * 60 +  list_tempo[2])
@@ -85,9 +86,8 @@ dataset.to_excel(os.path.join(DATASET_DESTINY, 'dataset_raw_teste2.xlsx'))
 dataset['diagnostico_bin'] = np.where(dataset['diagnostico'] == 'PNES', 1, 0)
 dataset.drop(columns=['cod_exame', 'id_paciente'])
 
-dataset.to_excel(os.path.join(DATASET_DESTINY, 'dataset_1sec_teste2.xlsx'))
+dataset.to_excel(os.path.join(DATASET_DESTINY, 'dataset_A.xlsx'),index =False)
 
-# dataset_normalizado_x = mean_norm(dataset)
+dataset_normalizado_x = preprocessing.normalize(dataset)
 
-# dataset.to_excel(os.path.join(DATASET_DESTINY,
-#                  'dataset_1sec_normalizado_teste.xlsx'))
+dataset.to_excel(os.path.join(DATASET_DESTINY,'dataset_A_normalizado.xlsx',index =False))
