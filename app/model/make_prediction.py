@@ -1,24 +1,25 @@
 import os
 import pickle
-import pandas as pd
 from decouple import config
 
-# TEST_EXAM_FILENAME = config('test_exam_filename')
-# PICKLE_MODULE_FILENAME = config('pickle_location')
+from src.mne_handler import process_edf
+from src.constants import norms
 
-# making predictions with the saved model
-PICKLE_MODULE_FILENAME = 'E:\GIT\Vitreus\data\model.pkl'
-# TEST_EXAM_FILENAME = './data/test_exam.xlsx'
+# TEST_EXAM_FILENAME = config('test_exam_filename')
+PICKLE_MODULE_FILENAME = config('PICKLE_LOCATION')
+
 
 print(os.getcwd())
 
 
-def make_infer(dataset):
+def make_infer(exam, ictal_start, ictal_end):
 
-    dataset_test = pd.read_excel(dataset)
+    features = process_edf(exam, ictal_start, ictal_end)
+
+    optimized_features = features[['mediaD2', 'desvpadD1', 'maximoA5', 'maximoD5', 'maximoD1']].values / norms
 
     loaded_model = pickle.load(open(PICKLE_MODULE_FILENAME, 'rb'))
 
-    prediction = loaded_model.predict(
-        (dataset_test.drop(['cod_exame', 'id_paciente', 'diagnostico'], axis=1)))
-    return prediction
+    prediction = loaded_model.predict(optimized_features)
+    
+    return prediction[0]

@@ -2,10 +2,9 @@ import os
 import re
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import pywt
 from decouple import config
-from intervalos_exames import intervalos_exames
+from develop.intervalos_exames import intervalos_exames
 from sklearn import preprocessing
 
 def to_seconds_list(list_tempo):

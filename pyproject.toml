@@ -1,0 +1,22 @@
+[project]
+name = "vitreus"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "RafaelAsafe",email = "asafe.ferr@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "python-decouple (>=3.8,<4.0)",
+    "streamlit (>=1.48.0,<2.0.0)",
+    "scikit-learn (>=1.7.1,<2.0.0)",
+    "mne (>=1.10.1,<2.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "pywavelets (>=1.9.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

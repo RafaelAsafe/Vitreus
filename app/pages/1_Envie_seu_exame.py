@@ -1,7 +1,6 @@
 import streamlit as st
-import pandas as pd
 from datetime import datetime
-from utils.utils import read_edf
+from src.mne_handler import read_edf
 
 
 st.set_page_config(page_title="Adicionar arquivo", page_icon="📈")
@@ -27,6 +26,7 @@ with col1:
     def click_button():
         st.session_state['button'] = not st.session_state['button']
 
+    
     st.button("CNEP", on_click=click_button)
 
     if st.session_state['button']:
@@ -35,10 +35,13 @@ with col1:
 
         if uploaded_file_pnes is not None:
             try:
-                with open(f".\\data\\exams\\raw\\PNES\{uploaded_file_pnes.name.split('.')[0].replace(' ','')}_{datetime.now().strftime('%Y-%m-%d-%H%M%S')}.edf", 'wb') as f:
+                with open(f".\\data\\exams\\raw\\undefined\\{uploaded_file_pnes.name.split('.')[0].replace(' ','')}_{datetime.now().strftime('%Y-%m-%d-%H%M%S')}-hip-pnes.edf", 'wb') as f:
                     f.write(uploaded_file_pnes.getvalue())
+                st.write("Arquivo enviado com sucesso!")
             except Exception as e:
                 st.error(f"Erro ao ler o arquivo {e}")
+        
+        
                 
 # button PNES:
 with col2:
@@ -55,7 +58,12 @@ with col2:
         # restringir apenas para edf files
         if uploaded_file_ce is not None:
             try:
-                with open(f".\\data\\exams\\raw\\SE\{uploaded_file_ce.name.split('.')[0]}_{datetime.now().strftime('%Y%m%d')}.edf", 'wb') as f:
+                with open(f".\\data\\exams\\raw\\undefined\\{uploaded_file_ce.name.split('.')[0]}_{datetime.now().strftime('%Y%m%d')}-hip-ce.edf", 'wb') as f:
                     f.write(uploaded_file_ce.getvalue())
+                st.write("Arquivo enviado com sucesso!")
             except Exception as e:
                 st.error(f"Erro ao ler o arquivo {e}")
+        
+       
+
+    
